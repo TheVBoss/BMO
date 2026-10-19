@@ -1,0 +1,34 @@
+WHAT BMO DOES
+=============
+BMO is an Adventure Time-themed robot built on a Raspberry Pi 5. It has a
+personality powered by a Groq LLM (llama-3.3-70b) and communicates through
+lip-synced speech (Piper TTS + Rhubarb Lip Sync) displayed on a 4.3" DSI
+touchscreen. It listens for a wake word ("Hey BMO"), transcribes your voice
+via Whisper, and responds with speech and animated facial expressions.
+
+BMO can:
+  - Hold a natural conversation as its Adventure Time character
+  - Drive forwards and backwards (encoder-based PID, precise distance control)
+  - Turn left and right (pivot turn, degree-based PID)
+  - Drive or turn for a set time (open-loop, no encoder feedback)
+  - Stop at a set distance from an obstacle (ultrasonic sensor + DrivePID)
+  - Take a photo and describe what it sees (Groq vision model)
+  - Show animated facial expressions: idle blinking, thinking flicker, listening overlay
+  - Be controlled by physical buttons (triangle = wake bypass, circle = shutdown)
+  - Move the Pi's mouse cursor via the direction buttons (Wayland uinput)
+
+LIMITS
+======
+  - Maximum drive distance per command: 2000mm (2 metres)
+  - Turning uses degrees or time — no distance or obstacle-based turning
+  - A single command cannot specify both a travel distance AND a stop-at distance
+  - Time-based commands are open-loop (no encoder feedback, less precise than distance commands)
+  - Camera only works in Raspberry Pi mode (Windows uses a test image)
+  - Motors, encoders, ultrasonic sensor, and buttons require Raspberry Pi hardware
+  - Wake word detection requires openwakeword and the custom wakeword.onnx model
+  - TTS requires the Piper bmo.onnx voice model in audio/bmo/
+  - Groq API key required for all LLM, STT, and vision features
+
+References:
+- BMO 3D model: https://www.printables.com/model/1139445-adventure-time-bmo-figure-interactive/files
+- Build video: https://www.youtube.com/watch?v=l5ggH-YhuAw

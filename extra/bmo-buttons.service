@@ -1,0 +1,14 @@
+[Unit]
+Description=BMO Arduino button box (mouse/click/shutdown/wake-bypass)
+After=multi-user.target
+
+[Service]
+Type=simple
+User=vunny
+ExecStart=/usr/bin/python3 /home/vunny/robot_project_clean/actions.py
+WorkingDirectory=/home/vunny/robot_project_clean
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

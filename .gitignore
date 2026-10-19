@@ -1,0 +1,39 @@
+# API keys and private environment settings
+.env
+.env.*
+!.env.example
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Logs, process files and backups
+*.log
+*.pid
+*.bak
+/log.txt
+/startup.txt
+
+# Local editor and assistant settings
+.vscode/
+.idea/
+.claude/
+
+# Exclude other voice models, keep BMO's required models
+*.onnx
+!audio/bmo/bmo.onnx
+!audio/wakeword.onnx
+!audio/silero_vad.onnx
+
+# Compressed archives
+*.zip
+
+# Operating system files
+.DS_Store
+Thumbs.db

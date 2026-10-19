@@ -1,0 +1,25 @@
+# Cross-platform dependencies - installable with `pip install -r requirements.txt`
+# on both Windows (dev) and the Raspberry Pi.
+python-dotenv
+groq
+numpy
+scipy
+sounddevice
+pygame
+playsound
+librosa
+piper-tts
+openwakeword
+onnxruntime
+ddgs
+requests
+pyserial
+
+# ------------------------------------------------------------------
+# Raspberry Pi only - NOT installable via pip on Windows/macOS. These need
+# actual Pi hardware/GPIO access, so config.is_raspberry_pi gates every
+# import of them in the code. Install on the Pi itself via:
+#   gpiod:      sudo apt install python3-libgpiod (or pip install gpiod on the Pi)
+#   evdev:      pip install evdev (Linux only)
+#   fusion_hat: curl -sSL https://raw.githubusercontent.com/sunfounder/sunfounder-installer-scripts/main/install-fusion-hat.sh | sudo bash
+# ------------------------------------------------------------------
