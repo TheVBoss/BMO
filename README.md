@@ -1,5 +1,4 @@
-# BMO Robot — Ozzy/Jarvis
-
+# BMO Robot
 An interactive AI-powered robot built on a Raspberry Pi with a DSI LCD display, TTS/STT, wake word detection, motor control, and a camera.
 
 Inspired by the BMO character from Adventure Time.  
