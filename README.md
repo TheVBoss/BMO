@@ -4,4 +4,4 @@ An interactive AI-powered robot built on a Raspberry Pi with a DSI LCD display, 
 [vunnyg.com/bmo](https://vunnyg.com/bmo)
 
 Inspired by the BMO character from Adventure Time.  
-CAD model reference: https://www.printables.com/model/1139445-adventure-time-bmo-figure-interactive
+CAD files are on the website.
